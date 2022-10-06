@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const op = require('./ejercicio1')
+op.suma(5,10)
+op.resta(6,10)
+op.multi(10,10)
+op.divi(3,9)
+op.pote(5,9)
+op.radi(8,9)
+console.log(op)
+
+var menu="MENU\n";
+menu+="1. Sumar\n";
+menu+="2. Restar\n";
+menu+="3. Multiplicar\n";
+menu+="4. Dividir\n";
+menu+="5. Potencia\n";
+menu+="6. Radicacion\n";
+menu+="Ingrese una opcion\n\n";
+
+var cod=0;
+var i;
+
+for(i=0;cod!=4;i++){
+    cod=parseInt(prompt(menu));
+
+    switch(cod){
+        case 1: 
+        const op = require('./ejercicio1')
+        op.suma(5,10)
+        console.log(op)
+        break;
+        case 2: 
+        const op = require('./ejercicio1')
+        op.resta(6,10)
+        console.log(op)
+        break;
+        case 3: 
+        const op = require('./ejercicio1')
+        op.multi(10,10)
+        console.log(op)
+        break;
+        case 4: 
+        const op = require('./ejercicio1')
+        op.divi(3,9)
+        console.log(op)
+        break;
+        case 5: 
+        const op = require('./ejercicio1')
+        op.pote(5,9)
+        console.log(op)
+        break;
+        case 6: 
+        const op = require('./ejercicio1')
+        op.radi(8,9)
+        console.log(op)
+        break;
+        default: document.write("Esta operacion no existe"+i);
+    }
+}while(cod!=6);
+
+document.write("<br>El resultado es"+i);
+
+
+    </script>
+    
+</body>
+</html>
