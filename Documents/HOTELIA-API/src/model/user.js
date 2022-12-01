@@ -22,7 +22,7 @@ const userSchema = new Schema({
 
     reservas:[{
         type: Schema.Types.ObjectId,
-        ref: 'Reserva'
+        ref: 'Reservas'
     }]
 })
 

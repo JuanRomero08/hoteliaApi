@@ -1,7 +1,7 @@
-const moongose =require('moongose')
+const moongose =require('mongoose')
 
 const conexionDB=async ()=>{
-    const url= `mongodb+srv://${process.env.USER}:<password>@cluster0.nqswzvi.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
+    const url= `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.nqswzvi.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
     try{
         const DB= await moongose.connect(url);
         console.log("conexion satisfactoria", DB.connection.name);

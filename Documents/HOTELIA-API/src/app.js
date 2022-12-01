@@ -1,9 +1,10 @@
 const express = require('express');
 const conexionDB =require('./db');
-const rutasHab = require('.routes/habitacion.routes');
-const rutasUser = require('.routes/user.routes');
-const rutasRese = require('.routes/reserva.routes');
+const rutasHab = require('./routes/habitacion.routes');
+const rutasUser = require('./routes/user.routes');
+const rutasRese = require('./routes/reserva.routes');
 const app = express();
+const moongose = require("mongoose");
 
 require('dotenv').config();
 

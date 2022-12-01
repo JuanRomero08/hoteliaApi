@@ -1,4 +1,4 @@
-const {Schema, model} = require("moongose");
+const {Schema, model} = require("mongoose");
 
 const habitacionSchema = new Schema({
     _id: Number,
@@ -13,10 +13,15 @@ const habitacionSchema = new Schema({
     valornoche: Number,
     img: String,
     estado: String,
-    reservas:[{
+
+   reservas:[{
         type: Schema.Types.ObjectId,
-        ref: 'Reserva'
+        ref: 'Reservas'
     }]
 })
+
+habitacionSchema.methods.setImg= function set(filename){
+    this.img=`/public/${filename}`;
+};
 
 module.exports=model("Habitacion", habitacionSchema);
